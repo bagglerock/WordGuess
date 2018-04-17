@@ -9,7 +9,6 @@ var Letter = function(letter) {
           this.placeholder = this.letter;
       }
       return this.placeholder;
-      //console.log(this.placeholder);
   }
 
   this.checkLetter = function(testLetter){
@@ -18,14 +17,9 @@ var Letter = function(letter) {
           return true;
       } else {
           return false;
-          //console.log("this letter does not match");
       }
   }
 
 };
-
-//var testLetter = new Letter("a");
-//testLetter.checkLetter("a");
-//testLetter.showLetter();
 
 module.exports = Letter;
