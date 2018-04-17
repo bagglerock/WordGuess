@@ -24,17 +24,16 @@ var Word = function(word) {
     this.guess = function(guess) {
         for (var i = 0 ; i < this.letterBank.length ; i++ ){
             this.letterBank[i].checkLetter(guess);
-            console.log(this.letterBank[i].checkLetter(guess));
         }
         this.showWord();
     }
 
 }
 
-var testWord = new Word("ruby");
-testWord.addLetters();
-testWord.showWord();
-testWord.guess("u");
-testWord.guess("y");
+//var testWord = new Word("ruby");
+//testWord.addLetters();
+//testWord.showWord();
+//testWord.guess("u");
+//testWord.guess("y");
 
 module.exports = Word;
