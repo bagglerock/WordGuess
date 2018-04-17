@@ -32,13 +32,19 @@ var Word = function(word) {
     }
   };
 
-  this.isCompleted = function() {
-    if (this.letterBank.placeholder.indexOf("_") === -1) {
-      return true;
-    } else {
-      return false;
+  this.isComplete = function() {
+    var hasUnderscore = false;
+    for (var i = 0; i < this.letterBank.length; i++) {
+      if (!this.letterBank[i].guessed) {
+        hasUnderscore = true;
+      }
     }
-  }
+    if (hasUnderscore) {
+      return false;
+    } else {
+      return true;
+    }
+  };
 };
 
 module.exports = Word;

@@ -50,19 +50,23 @@
   }
 
   function checkState(word) {
-    if (word.isCompleted()) {
-      console.log("good job you win.");
+    if (word.isComplete()) {
+      console.log("good job you win. The word is ");
+      word.showWord();
+      console.log("New Word");
       chooseWord();
     } else if (wrongCount > 0) {
       playGame(word);
     } else {
       console.log(
-        "you get nothing! you lose! good day sir/madam/undecided/decidely both!"
+        "you get nothing! you lose! good day sir!"
       );
+      console.log("New Word");
       chooseWord();
     }
   }
 
   //start
+  console.log("New Game");
   chooseWord();
 })();
