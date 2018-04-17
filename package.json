@@ -1,0 +1,24 @@
+{
+  "name": "WordGuess",
+  "version": "1.0.0",
+  "description": "Kinda like Hangman but using only node and CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagglerock/WordGuess.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bagglerock/WordGuess/issues"
+  },
+  "homepage": "https://github.com/bagglerock/WordGuess#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^5.2.0"
+  }
+}
