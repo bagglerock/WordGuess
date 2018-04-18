@@ -26,11 +26,18 @@
         {
           name: "letterChoice",
           message: "Pick a letter",
-          type: "input"
+          type: "input",
+          validate: function(value) {
+            var regex = /^[a-z]/gi;
+            if (value.length === 1 && value.match(regex)){
+              return true;
+            }
+            return "pick a letter!";
+          }
         }
       ])
       .then(function(selectedLetter) {
-        var letter = selectedLetter.letterChoice;
+        var letter = selectedLetter.letterChoice.toLowerCase();
         if (guesses.indexOf(letter) === -1) {
           guesses.push(letter);
           if (!word.guess(letter)) {
